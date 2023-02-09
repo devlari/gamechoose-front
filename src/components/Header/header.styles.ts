@@ -11,7 +11,6 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 25px;
   background-color: #1b1811;
 `;
 
@@ -31,7 +30,6 @@ export const HeaderLoggedContainer = styled.div`
   height: 70px;
   width: 100%;
   display: flex;
-  margin-bottom: 25px;
   background-color: #1b1811;
 `;
 

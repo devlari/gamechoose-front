@@ -1,13 +1,16 @@
-import { Inter } from "@next/font/google";
 import { Header } from "@/components";
-
-const inter = Inter({ subsets: ["latin"] });
+import { Title, Subtitle, BackgroundImage } from "./index.styles";
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <p>hello</p>
+      <Header title="" />
+      <BackgroundImage>
+        <div>
+          <Title className="changa">GameChoose</Title>
+          <Subtitle className="changa">Você no controle.</Subtitle>
+        </div>
+      </BackgroundImage>
     </>
   );
 }

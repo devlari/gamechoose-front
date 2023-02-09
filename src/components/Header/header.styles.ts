@@ -26,3 +26,30 @@ export const OptionsHeader = styled(Link)<StyledProps>`
     color: #78bc61;
   }
 `;
+
+export const HeaderLoggedContainer = styled.div`
+  height: 70px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 25px;
+  background-color: #1b1811;
+`;
+
+export const OptionsLoggedHeader = styled(Link)<StyledProps>`
+  background-color: ${(props) => (props.active ? "inherit" : "#78bc61")};
+  color: #fdfffc;
+  padding: 20px 40px;
+  height: 100%;
+  font-size: 1.2rem;
+
+  &:hover {
+    background-color: #78bc61;
+    color: #fdfffc;
+  }
+`;
+
+export const HeaderDivider = styled.div`
+  height: 100%;
+  width: 1px;
+  background-color: #fdfffc;
+`;

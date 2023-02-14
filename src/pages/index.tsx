@@ -1,4 +1,6 @@
 import { Header } from "@/components";
+import { Input } from "@/components/Form";
+import { useState } from "react";
 import {
   TitleImage,
   SubtitleImage,
@@ -10,6 +12,10 @@ import {
 } from "./index.styles";
 
 export default function Home() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
   return (
     <>
       <Header title="" />
@@ -70,6 +76,48 @@ export default function Home() {
           <Column>
             <Title className="changa">Contato</Title>
             <Content className="fira-branco">Deixe uma mensagem!</Content>
+            <form>
+              <Input
+                label="Nome"
+                name="name"
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+                value={name}
+                error=""
+                size="medium"
+                rows={1}
+                id="name"
+                type="text"
+              />
+              <Input
+                label="Email"
+                name="email"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                value={email}
+                error=""
+                size="medium"
+                rows={1}
+                id="email"
+                type="text"
+              />
+              <Input
+                label="Mensagem"
+                name="message"
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
+                value={name}
+                error=""
+                multiline
+                rows={4}
+                size="medium"
+                id="message"
+                type="text"
+              />
+            </form>
           </Column>
         </Row>
       </div>

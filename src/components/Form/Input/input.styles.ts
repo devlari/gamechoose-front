@@ -33,8 +33,8 @@ export const StyledLabel = styled.label<LabelProps>`
 `;
 
 export const StyledInput = styled.input<InputProps>`
-  color: #fdfffc;
-  border: 1px solid #fdfffc;
+  /* color: #fdfffc; */
+  ${(props) => props.error && "border: 4px solid red;"}
   border-radius: 5px;
   padding: 10px;
   font-size: ${(props) =>

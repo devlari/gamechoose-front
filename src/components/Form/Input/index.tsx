@@ -1,6 +1,6 @@
 import { StyledLabel, StyledInput } from "./input.styles";
 
-type Props = {
+export type InputProps = {
   label: string;
   name: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -9,7 +9,7 @@ type Props = {
   disabled?: boolean;
   rows?: number;
   multiline?: boolean;
-  type?: string;
+  type?: "text" | "email" | "password" | "number" | "date" | "tel";
   size?: "small" | "medium" | "large";
   id?: string;
   focus?: boolean;
@@ -28,7 +28,7 @@ export function Input({
   id = name,
   type = "text",
   focus = false,
-}: Props) {
+}: InputProps) {
   return (
     <div
       style={{
@@ -54,6 +54,8 @@ export function Input({
         <span
           style={{
             color: "red",
+            fontSize: "14px",
+            marginTop: "-5px",
           }}
         >
           {error}

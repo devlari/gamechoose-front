@@ -1,4 +1,5 @@
 import { Header } from "@/components";
+import Footer from "@/components/Footer";
 import { Input } from "@/components/Form";
 import schema from "@/modules/contact/schema";
 import { Form, Formik } from "formik";
@@ -93,7 +94,11 @@ export default function Home() {
               }}
             >
               {({ values, errors, handleChange }) => (
-                <Form>
+                <Form
+                  style={{
+                    marginTop: "10px",
+                  }}
+                >
                   <Input
                     label="Nome"
                     name="name"
@@ -140,6 +145,7 @@ export default function Home() {
           </Column>
         </Row>
       </div>
+      <Footer />
     </>
   );
 }
